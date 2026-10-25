@@ -1,0 +1,249 @@
+﻿[DebugCreate HRESULT=0x00000000]
+[QueryInterface(IDebugControl) HRESULT=0x00000000]
+[SetOutputCallbacks HRESULT=0x00000000]
+
+************* Preparing the environment for Debugger Extensions Gallery repositories **************
+   ExtensionRepository : Implicit
+   UseExperimentalFeatureForNugetShare : true
+   AllowNugetExeUpdate : true
+   NonInteractiveNuget : true
+   AllowNugetMSCredentialProviderInstall : true
+   AllowParallelInitializationOfLocalRepositories : true
+   EnableRedirectToChakraJsProvider : false
+
+   -- Configuring repositories
+      ----> Repository : LocalInstalled, Enabled: true
+      ----> Repository : UserExtensions, Enabled: true
+
+>>>>>>>>>>>>> Preparing the environment for Debugger Extensions Gallery repositories completed, duration 0.000 seconds
+
+************* Waiting for Debugger Extensions Gallery to Initialize **************
+
+>>>>>>>>>>>>> Waiting for Debugger Extensions Gallery to Initialize completed, duration 0.016 seconds
+   ----> Repository : UserExtensions, Enabled: true, Packages count: 0
+   ----> Repository : LocalInstalled, Enabled: true, Packages count: 0
+
+Microsoft (R) Windows Debugger Version 10.0.29457.1000 AMD64
+Copyright (c) Microsoft Corporation. All rights reserved.
+
+
+Loading Dump File [C:\shot-bench\dumps\snow_shot_mini.exe_261025_212231.dmp]
+User Mini Dump File with Full Memory : Only application data is available
+
+Comment: '
+*** procdump64.exe -accepteula -ma -e -n 1 -x C:\shot-bench\dumps C:\shot-bench\dump-814530\snow-shot-mini-1.3.8-windows-x64-portable\bin\snow_shot_mini.exe
+*** Unhandled exception: C0000005.ACCESS_VIOLATION'
+[OpenDumpFileWide HRESULT=0x00000000]
+Symbol search path is: srv*
+Executable search path is: 
+Windows 10 Version 26200 MP (28 procs) Free x64
+Product: WinNt, suite: SingleUserTS
+Edition build lab: 26100.1.amd64fre.ge_release.240331-1435
+Debug session time: Sun Oct 25 21:22:31.000 2026 (UTC + 8:00)
+System Uptime: 9 days 7:06:50.159
+Process Uptime: 0 days 0:00:01.000
+................................................................
+........
+
+************* Symbol Loading Error Summary **************
+Module name            Error
+ntdll                  The system cannot find the file specified
+
+You can troubleshoot most symbol related issues by turning on symbol loading diagnostics (!sym noisy) and repeating the command that caused symbols to be loaded.
+You should also verify that your symbol search path (.sympath) is correct.
+Unable to add extension DLL: ntsdexts
+Unable to add extension DLL: uext
+Unable to add extension DLL: exts
+This dump file has an exception of interest stored in it.
+The stored exception information can be accessed via .ecxr
+(d8b4.cf1c): Access violation - code c0000005 (first/second chance not available)
+
++------------------------------------------------------------------------+
+| This target supports Hardware-enforced Stack Protection. A HW based    |
+| "Shadow Stack" may be available to assist in debugging and analysis.   |
+| See aka.ms/userhsp for more info.                                      |
+|                                                                        |
+| dps @ssp                                                               |
+|                                                                        |
++------------------------------------------------------------------------+
+
+For analysis of this file, run !analyze -v
+[WaitForEvent HRESULT=0x00000000]
+[GetExecutionStatus HRESULT=0x00000000, Status=6]
+Full memory user mini dump: C:\shot-bench\dumps\snow_shot_mini.exe_261025_212231.dmp
+
+Microsoft (R) Windows Debugger Version 10.0.29457.1000 AMD64
+Copyright (c) Microsoft Corporation. All rights reserved.
+
+command line: 'DbgDump.exe C:\shot-bench\dumps\snow_shot_mini.exe_261025_212231.dmp C:\shot-bench\dump-814530\mini-analysis.txt'  Debugger Process 0xE6CC 
+dbgeng:  image 10.0.29457.1000, 
+        [path: C:\shot-bench\dump-814530\dbgeng-20250929\content\amd64\dbgeng.dll]
+dbghelp: image 10.0.26100.9444, 
+        [path: C:\WINDOWS\SYSTEM32\dbghelp.dll]
+        DIA version: 33145
+Extension DLL search Path:
+    C:\shot-bench\dump-814530\dbgeng-20250929\content\amd64\WINXP;C:\shot-bench\dump-814530\dbgeng-20250929\content\amd64\winext;C:\shot-bench\dump-814530\dbgeng-20250929\content\amd64\winext\arcade;C:\shot-bench\dump-814530\dbgeng-20250929\content\amd64\pri;C:\shot-bench\dump-814530\dbgeng-20250929\content\amd64;C:\Users\user\AppData\Local\Dbg\EngineExtensions;C:\shot-bench\dump-814530\dbgeng-20250929\content\amd64;C:\Program Files\OpenSSH;C:\WINDOWS\system32;C:\WINDOWS;C:\WINDOWS\System32\Wbem;C:\WINDOWS\System32\WindowsPowerShell\v1.0\;C:\WINDOWS\System32\OpenSSH\;C:\Program Files (x86)\NVIDIA Corporation\PhysX\Common;C:\Program Files\CorpLink\current\module\epm\x64;C:\Program Files\Git\cmd;C:\Users\user\.kimi-code\bin;C:\Users\user\AppData\Local\Microsoft\WindowsApps;C:\Users\user\AppData\Local\Programs\Microsoft VS Code\bin;C:\Users\user\AppData\Local\GitHubDesktop\bin
+Extension DLL chain:
+    dbghelp: image 10.0.26100.9444, API 10.0.6, 
+        [path: C:\WINDOWS\SYSTEM32\dbghelp.dll]
+[OutputVersionInformation HRESULT=0x00000000]
+
+0:000> .sympath C:\shot-bench\dump-814530\symbols
+Symbol search path is: C:\shot-bench\dump-814530\symbols
+Expanded Symbol search path is: c:\shot-bench\dump-814530\symbols
+
+************* Path validation summary **************
+Response                         Time (ms)     Location
+OK                                             C:\shot-bench\dump-814530\symbols
+
+[Execute HRESULT=0x00000000]
+
+0:000> lmf
+start             end                 module name
+00007ff6`95bc0000 00007ff6`9ac65000   snow_shot_mini C:\shot-bench\dump-814530\snow-shot-mini-1.3.8-windows-x64-portable\bin\snow_shot_mini.exe
+00007ffb`64cb0000 00007ffb`64e62000   d3d9     C:\Windows\System32\d3d9.dll
+00007ffb`65010000 00007ffb`6502d000   magnification C:\Windows\System32\magnification.dll
+00007ffb`6b480000 00007ffb`6b899000   mfcore   C:\Windows\System32\mfcore.dll
+00007ffb`77c40000 00007ffb`77c63000   D3D12    C:\Windows\System32\D3D12.dll
+00007ffb`88440000 00007ffb`88860000   UIAutomationCore C:\Windows\System32\UIAutomationCore.DLL
+00007ffb`8df50000 00007ffb`8e005000   comctl32 C:\Windows\WinSxS\amd64_microsoft.windows.common-controls_6595b64144ccf1df_5.82.26100.8328_none_87eede957a2ccddd\comctl32.dll
+00007ffb`8e890000 00007ffb`8e905000   oleacc   C:\Windows\System32\oleacc.dll
+00007ffb`8ea60000 00007ffb`8ec85000   mfplat   C:\Windows\System32\mfplat.dll
+00007ffb`8f0b0000 00007ffb`8f148000   mf       C:\Windows\System32\mf.dll
+00007ffb`95f20000 00007ffb`961bf000   icu      C:\Windows\System32\icu.dll
+00007ffb`982c0000 00007ffb`98395000   mfreadwrite C:\Windows\System32\mfreadwrite.dll
+00007ffb`9c4a0000 00007ffb`9c5b0000   flhhlp   C:\Windows\System32\flhhlp.dll
+00007ffb`a2710000 00007ffb`a28eb000   GdiPlus  C:\Windows\WinSxS\amd64_microsoft.windows.gdiplus_6595b64144ccf1df_1.1.26100.9444_none_6ef568883dc4f9e8\GdiPlus.dll
+00007ffb`ab220000 00007ffb`ab2df000   mscms    C:\Windows\System32\mscms.dll
+00007ffb`aff30000 00007ffb`aff6b000   RTWorkQ  C:\Windows\System32\RTWorkQ.dll
+00007ffb`c0f30000 00007ffb`c0f59000   srvcli   C:\Windows\System32\srvcli.dll
+00007ffb`c1040000 00007ffb`c1061000   mpr      C:\Windows\System32\mpr.dll
+00007ffb`c1850000 00007ffb`c197a000   winhttp  C:\Windows\System32\winhttp.dll
+00007ffb`c1f90000 00007ffb`c1fc6000   winmm    C:\Windows\System32\winmm.dll
+00007ffb`c2da0000 00007ffb`c2dab000   version  C:\Windows\System32\version.dll
+00007ffb`c4010000 00007ffb`c448f000   d3dcompiler_47 C:\Windows\System32\d3dcompiler_47.dll
+00007ffb`c4700000 00007ffb`c47f5000   propsys  C:\Windows\System32\propsys.dll
+00007ffb`c5910000 00007ffb`c59af000   apphelp  C:\Windows\System32\apphelp.dll
+00007ffb`c59c0000 00007ffb`c59cd000   secur32  C:\Windows\System32\secur32.dll
+00007ffb`c59e0000 00007ffb`c5a0a000   wtsapi32 C:\Windows\System32\wtsapi32.dll
+00007ffb`c5d00000 00007ffb`c5da8000   uxtheme  C:\Windows\System32\uxtheme.dll
+00007ffb`c5e40000 00007ffb`c5e6f000   dwmapi   C:\Windows\System32\dwmapi.dll
+00007ffb`c61e0000 00007ffb`c6224000   DXCore   C:\Windows\System32\DXCore.dll
+00007ffb`c6330000 00007ffb`c696a000   d2d1     C:\Windows\System32\d2d1.dll
+00007ffb`c69d0000 00007ffb`c6c3a000   DWrite   C:\Windows\System32\DWrite.dll
+00007ffb`c71c0000 00007ffb`c7420000   d3d11    C:\Windows\System32\d3d11.dll
+00007ffb`c7430000 00007ffb`c756b000   dxgi     C:\Windows\System32\dxgi.dll
+00007ffb`c81a0000 00007ffb`c81ad000   netutils C:\Windows\System32\netutils.dll
+00007ffb`c81c0000 00007ffb`c81f3000   IPHLPAPI C:\Windows\System32\IPHLPAPI.DLL
+00007ffb`c83b0000 00007ffb`c8400000   authz    C:\Windows\System32\authz.dll
+00007ffb`c8810000 00007ffb`c882b000   kernel_appcore C:\Windows\System32\kernel.appcore.dll
+00007ffb`c8ad0000 00007ffb`c8b19000   sspicli  C:\Windows\System32\sspicli.dll
+00007ffb`c8e60000 00007ffb`c8e94000   userenv  C:\Windows\System32\userenv.dll
+00007ffb`c9010000 00007ffb`c901c000   CRYPTBASE C:\Windows\System32\CRYPTBASE.DLL
+00007ffb`c91d0000 00007ffb`c91eb000   cryptsp  C:\Windows\System32\cryptsp.dll
+00007ffb`c9360000 00007ffb`c939f000   ntasn1   C:\Windows\System32\ntasn1.dll
+00007ffb`c93b0000 00007ffb`c93e0000   ncrypt   C:\Windows\System32\ncrypt.dll
+00007ffb`c9730000 00007ffb`c9745000   umpdc    C:\Windows\System32\umpdc.dll
+00007ffb`c9750000 00007ffb`c97ae000   powrprof C:\Windows\System32\powrprof.dll
+00007ffb`c9800000 00007ffb`c9852000   cfgmgr32 C:\Windows\System32\cfgmgr32.dll
+00007ffb`c9a70000 00007ffb`c9a9a000   bcrypt   C:\Windows\System32\bcrypt.dll
+00007ffb`c9b80000 00007ffb`c9ba7000   win32u   C:\Windows\System32\win32u.dll
+00007ffb`c9bb0000 00007ffb`c9d2e000   crypt32  C:\Windows\System32\crypt32.dll
+00007ffb`c9d40000 00007ffb`ca142000   KERNELBASE C:\Windows\System32\KERNELBASE.dll
+00007ffb`ca1e0000 00007ffb`ca28c000   bcryptprimitives C:\Windows\System32\bcryptprimitives.dll
+00007ffb`ca2a0000 00007ffb`ca343000   msvcp_win C:\Windows\System32\msvcp_win.dll
+00007ffb`ca410000 00007ffb`ca55c000   ucrtbase C:\Windows\System32\ucrtbase.dll
+00007ffb`ca570000 00007ffb`ca699000   gdi32full C:\Windows\System32\gdi32full.dll
+00007ffb`ca700000 00007ffb`ca72b000   gdi32    C:\Windows\System32\gdi32.dll
+00007ffb`ca730000 00007ffb`ca7d9000   msvcrt   C:\Windows\System32\msvcrt.dll
+00007ffb`ca9f0000 00007ffb`caa99000   sechost  C:\Windows\System32\sechost.dll
+00007ffb`caab0000 00007ffb`cabc8000   rpcrt4   C:\Windows\System32\rpcrt4.dll
+00007ffb`cabd0000 00007ffb`cac01000   imm32    C:\Windows\System32\imm32.dll
+00007ffb`cac10000 00007ffb`caccc000   advapi32 C:\Windows\System32\advapi32.dll
+00007ffb`cace0000 00007ffb`cad60000   ws2_32   C:\Windows\System32\ws2_32.dll
+00007ffb`cad70000 00007ffb`cae3b000   kernel32 C:\Windows\System32\kernel32.dll
+00007ffb`cae40000 00007ffb`caf3b000   SHCore   C:\Windows\System32\SHCore.dll
+00007ffb`cb120000 00007ffb`cb8b8000   shell32  C:\Windows\System32\shell32.dll
+00007ffb`cb8c0000 00007ffb`cbd47000   setupapi C:\Windows\System32\setupapi.dll
+00007ffb`cbd50000 00007ffb`cbf1f000   user32   C:\Windows\System32\user32.dll
+00007ffb`cbf30000 00007ffb`cc009000   oleaut32 C:\Windows\System32\oleaut32.dll
+00007ffb`cc130000 00007ffb`cc4b5000   combase  C:\Windows\System32\combase.dll
+00007ffb`cc560000 00007ffb`cc6fa000   ole32    C:\Windows\System32\ole32.dll
+00007ffb`cc700000 00007ffb`cc766000   shlwapi  C:\Windows\System32\shlwapi.dll
+00007ffb`cc770000 00007ffb`cc865000   comdlg32 C:\Windows\System32\comdlg32.dll
+00007ffb`cc980000 00007ffb`ccbe7000   ntdll    C:\Windows\System32\ntdll.dll
+
+[Execute HRESULT=0x00000000]
+
+0:000> .ecxr
+rax=00007ffbccb4c898 rbx=0000000f5c0b4000 rcx=00007ff69a6b8b68
+rdx=00000000fffffc6a rsi=0000000f5c601a00 rdi=0000000000000000
+rip=00007ffbcc98fa05 rsp=0000000f5c600fb0 rbp=0000000f5c601049
+ r8=0000000000000000  r9=00007ff69a6b8b70 r10=0000000000000001
+r11=0000000000000001 r12=00000000ff000000 r13=0000000f5c601a40
+r14=0000000000000000 r15=000000007ffe036a
+iopl=0         nv up ei pl zr na po nc
+cs=0033  ss=002b  ds=002b  es=002b  fs=0053  gs=002b             efl=00010246
+ntdll!RtlRaiseException+0x305:
+00007ffb`cc98fa05 c645a700        mov     byte ptr [rbp-59h],0 ss:0000000f`5c600ff0=??
+
+[Execute HRESULT=0x00000000]
+
+0:000> r
+Last set context:
+rax=00007ffbccb4c898 rbx=0000000f5c0b4000 rcx=00007ff69a6b8b68
+rdx=00000000fffffc6a rsi=0000000f5c601a00 rdi=0000000000000000
+rip=00007ffbcc98fa05 rsp=0000000f5c600fb0 rbp=0000000f5c601049
+ r8=0000000000000000  r9=00007ff69a6b8b70 r10=0000000000000001
+r11=0000000000000001 r12=00000000ff000000 r13=0000000f5c601a40
+r14=0000000000000000 r15=000000007ffe036a
+iopl=0         nv up ei pl zr na po nc
+cs=0033  ss=002b  ds=002b  es=002b  fs=0053  gs=002b             efl=00010246
+ntdll!RtlRaiseException+0x305:
+00007ffb`cc98fa05 c645a700        mov     byte ptr [rbp-59h],0 ss:0000000f`5c600ff0=??
+
+[Execute HRESULT=0x00000000]
+
+0:000> k 20
+Child-SP          RetAddr               Call Site
+0000000f`5c600fb0 00007ffb`cc99166f     ntdll!RtlRaiseException+0x305
+0000000f`5c6010b0 00007ffb`cc9928e2     ntdll!RtlSleepConditionVariableCS+0x43f
+*** WARNING: Unable to verify checksum for snow_shot_mini.exe
+0000000f`5c601130 00007ff6`99933d1d     ntdll!RtlEnterCriticalSection+0xf2
+0000000f`5c601170 00007ff6`99933e79     snow_shot_mini+0x3d73d1d
+0000000f`5c6011a0 00007ff6`9991b369     snow_shot_mini+0x3d73e79
+0000000f`5c6011d0 00007ff6`999060b1     snow_shot_mini+0x3d5b369
+0000000f`5c601200 00007ff6`9990479c     snow_shot_mini+0x3d460b1
+0000000f`5c601230 00007ffb`ccae54ff     snow_shot_mini+0x3d4479c
+0000000f`5c6012b0 00007ffb`cca4bd25     ntdll!_chkstk+0x9f
+0000000f`5c6012e0 00007ffb`ccae4e3e     ntdll!RtlWow64GetCurrentMachine+0x655
+0000000f`5c601a40 00007ffb`cc98fa7d     ntdll!KiUserExceptionDispatcher+0x2e
+0000000f`5c602170 00007ffb`cc99166f     ntdll!RtlRaiseException+0x37d
+0000000f`5c602270 00007ffb`cc9928e2     ntdll!RtlSleepConditionVariableCS+0x43f
+0000000f`5c6022f0 00007ff6`99933d1d     ntdll!RtlEnterCriticalSection+0xf2
+0000000f`5c602330 00007ff6`99933e79     snow_shot_mini+0x3d73d1d
+0000000f`5c602360 00007ff6`9991b369     snow_shot_mini+0x3d73e79
+0000000f`5c602390 00007ff6`999060b1     snow_shot_mini+0x3d5b369
+0000000f`5c6023c0 00007ff6`9990479c     snow_shot_mini+0x3d460b1
+0000000f`5c6023f0 00007ffb`ccae54ff     snow_shot_mini+0x3d4479c
+0000000f`5c602470 00007ffb`cca4bd25     ntdll!_chkstk+0x9f
+0000000f`5c6024a0 00007ffb`ccae4e3e     ntdll!RtlWow64GetCurrentMachine+0x655
+0000000f`5c602c00 00007ffb`cc98fa7d     ntdll!KiUserExceptionDispatcher+0x2e
+0000000f`5c603330 00007ffb`cc99166f     ntdll!RtlRaiseException+0x37d
+0000000f`5c603430 00007ffb`cc9928e2     ntdll!RtlSleepConditionVariableCS+0x43f
+0000000f`5c6034b0 00007ff6`99933d1d     ntdll!RtlEnterCriticalSection+0xf2
+0000000f`5c6034f0 00007ff6`99933e79     snow_shot_mini+0x3d73d1d
+0000000f`5c603520 00007ff6`9991b369     snow_shot_mini+0x3d73e79
+0000000f`5c603550 00007ff6`999060b1     snow_shot_mini+0x3d5b369
+0000000f`5c603580 00007ff6`9990479c     snow_shot_mini+0x3d460b1
+0000000f`5c6035b0 00007ffb`ccae54ff     snow_shot_mini+0x3d4479c
+0000000f`5c603630 00007ffb`cca4bd25     ntdll!_chkstk+0x9f
+0000000f`5c603660 00007ffb`ccae4e3e     ntdll!RtlWow64GetCurrentMachine+0x655
+
+[Execute HRESULT=0x00000000]
+
+0:000> !analyze -v
+analyze is not extension gallery command
+No export analyze found
+
+[Execute HRESULT=0x00000000]
