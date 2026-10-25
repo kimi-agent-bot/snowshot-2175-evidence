@@ -1,0 +1,20 @@
+﻿[
+    {
+        "Path":  "C:\\Windows\\System32\\flhhlp.dll",
+        "Length":  1084608,
+        "FileVersion":  "3.2.13.1",
+        "SHA256":  "81214bc15438717ccde837687a3d9365330d8a6446fbfa7f5a7f773a04a1774e",
+        "SignatureStatus":  "Valid",
+        "SignerSubject":  "CN=Microsoft Windows Hardware Compatibility Publisher, O=Microsoft Corporation, L=Redmond, S=Washington, C=US",
+        "SignerThumbprint":  "3847B761C2846DB72F61149176D09F9BB2D43E8A"
+    },
+    {
+        "Path":  "C:\\Program Files\\CorpLink\\current\\module\\uc\\x64\\flhhlp.dll",
+        "Length":  1084608,
+        "FileVersion":  "3.2.13.1",
+        "SHA256":  "81214bc15438717ccde837687a3d9365330d8a6446fbfa7f5a7f773a04a1774e",
+        "SignatureStatus":  "Valid",
+        "SignerSubject":  "CN=Microsoft Windows Hardware Compatibility Publisher, O=Microsoft Corporation, L=Redmond, S=Washington, C=US",
+        "SignerThumbprint":  "3847B761C2846DB72F61149176D09F9BB2D43E8A"
+    }
+]
